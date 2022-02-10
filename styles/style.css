@@ -5,6 +5,7 @@
 
 body {
   padding: 10em;
+  background-color: #f2f4dc;
 }
 
 h1 {
@@ -28,7 +29,7 @@ h3 {
 }
 
 .bt1 {
-  animation: colorRotate 2s linear 0s infinite;
+  background-color: #0ff;
   height: 75px;
   width: 400px;
   padding: 30px;
@@ -38,7 +39,7 @@ h3 {
 }
 
 .bt2 {
-  background-color: #0f0;
+  background-color: #f00;
   width: 330px;
   
   font-family: sans-serif;
@@ -53,7 +54,6 @@ h3 {
 
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-
 }
 
 .button h3 {
@@ -71,26 +71,3 @@ h3 {
   }
 }
 
-@keyframes colorRotate {
-  from {
-    background-color: #7F00FF,;
-  }
-  17% {
-    background-color: #FF0000;
-  }
-  34% {
-    background-color: #FF8000;
-  }
-  51  % {
-    background-color: #FFFF00;
-  }
-  68% {
-    background-color: #80FF00;
-  }
-  85% {
-    background-color: #00FFFF;
-  }
-  100% {
-    background-color: #7F00FF;
-  }
-}
