@@ -19,11 +19,6 @@ h3 {
 }
 
 .button {
-  background-color: #f00;
-  
-  height: auto;
-  width: 400px;
-  
   margin: auto;
   text-align: center; 
 
@@ -32,8 +27,46 @@ h3 {
   cursor: pointer;
 }
 
+.bt1 {
+  background-color: #f00;
+  height: 75px;
+  width: 400px;
+  padding: 30px;
+
+  z-index: 2;
+  position:relative;
+}
+
+.bt2 {
+  background-color: #0f0;
+  width: 330px;
+  
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+
+  padding: 20px;
+
+  animation: 1s ease-out 0s 1 slideInLeft;
+  z-index: 1;
+  position:relative;
+
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
 .button h3 {
   font-family: sans-serif;
   font-weight: 600;
   font-size: 50px;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
