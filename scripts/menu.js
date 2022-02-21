@@ -1,9 +1,15 @@
 var btn1 = document.getElementsByClassName("bt1");
+var game = document.getElementsByClassName("game")[0];
+game.style.visibility = "hidden";
 
-function script(){
-  console.log("Button pressed");
+function show_game(){
+  var game = document.getElementsByClassName("game")[0];
+  var menu = document.getElementsByClassName("main")[0];
 
-  
+  console.log(menu);
+
+  menu.style.visibility = "hidden";
+  game.style.visibility = "visible";
 }
 
 function show_rules(){

@@ -37,6 +37,7 @@ h3 {
 
 .bt1 {
   animation: rainbow-bg 30s linear infinite;
+  animation-delay: -20s;
 
   height: 75px;
   width: 400px;
@@ -220,4 +221,15 @@ h3 {
   100% {
     transform: translateY(-50%);
   }
+}
+
+.game {
+  top: 0;
+  position: absolute;
+
+  visibility: hidden;
+}
+
+.menu {
+  top: 0;
 }
