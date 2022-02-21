@@ -1,0 +1,4 @@
+comments of what needs to be done, but cant be done at the moment
+
+
+GameLogic.js funktionerne (NormalizeButtons & GrayoutButtons)
