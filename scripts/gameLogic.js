@@ -1,4 +1,3 @@
-
 var Chocolates = 13;
 var playerLastLick;
 
@@ -37,5 +36,3 @@ function NormalizeButtons(){
 function GrayoutButtons(){
     //function der gør knapperne grå
 }
-
-
