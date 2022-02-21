@@ -46,6 +46,7 @@ h3 {
   position:relative;
 
   border-radius: 5px;
+  border-bottom: 3px solid grey;
 }
 
 .bt2 {
