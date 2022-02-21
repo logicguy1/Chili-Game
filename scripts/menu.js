@@ -1,6 +1,4 @@
 var btn1 = document.getElementsByClassName("bt1");
-var game = document.getElementsByClassName("game")[0];
-game.style.visibility = "hidden";
 
 function show_game(){
   var game = document.getElementsByClassName("game")[0];
