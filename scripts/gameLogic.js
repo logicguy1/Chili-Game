@@ -5,6 +5,7 @@ function LickChocolate(Count){
     Chocolates -= Count;
     playerLastLick = Count;
     console.log(Count + " Chocolate was taken");
+    UpdateCounter(Chocolates)
 }
 
 
@@ -26,4 +27,8 @@ function NormalizeButtons(){
 
 function GrayoutButtons(){
     //function der gør knapperne grå
+}
+
+function UpdateCounter(Chocolates){
+    document.getElementById("chocolateCounter").innerHTML = Chocolates
 }
