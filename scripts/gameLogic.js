@@ -1,7 +1,8 @@
 setTimeout(() => {  START(); }, 10);
 var Chocolates = 13;
 var playerLastLick;
-const textDisplay = ["Dette er linje 1", "Linje 2 her", "Hej, jeg er en linje. linje nr. 3", "Din mor lugter af nugga, og jeg lugter af 4", "ehhhhhh 5", "SEX SEX SEX, nr fucking sex"]
+const textDisplay = ["|", "|", "|", "|", "|", "|"]
+var AcceptButtonPush = true;
 
 
 var textDisplayCount = 0;
@@ -9,6 +10,70 @@ function START(){
     console.log("GAME PAGE LOADED")
     UpdateCounter(Chocolates);
     UpdateTextDisplay();
+    GrayoutButtons();
+}
+
+
+
+// TURNS
+
+function FIRSTPLAY(){
+    Chocolates -= 1;
+    addTextLine("The computer decided to take 1 chocolate")
+    UpdateCounter();
+    NormalizeButtons();
+}
+
+function LickChocolate(Count){
+    if(AcceptButtonPush == true){
+        Chocolates -= Count;
+        playerLastLick = Count;
+        console.log(Count + " Chocolate was taken");
+        UpdateCounter(Chocolates);
+        addTextLine(Count + " Chocolates where taken from the jar, " + Chocolates + " chocolates are left.");
+        PlayerTurn();
+    }
+    
+}
+
+function PlayerTurn(){
+    GrayoutButtons();
+    setTimeout(() => {  StartComputerTurn(); }, 400);
+    console.log("Player Turn End");    
+}
+
+function StartComputerTurn(){
+    addTextLine("The computer is thinking...")
+    setTimeout(() => {  ComputerTurn(); }, 1500);
+}
+
+function ComputerTurn(){
+    Take = 4 - playerLastLick;
+    Chocolates -= Take;
+    addTextLine("The computer decided to take " + Take + " chocolates")
+    UpdateCounter();
+    NormalizeButtons();
+    CheckForLoss();
+}
+
+
+
+//
+//HELP Functions    --    TOOLS
+
+function NormalizeButtons(){
+    AcceptButtonPush = true;
+    console.log("Buttons enabled");
+}
+
+
+function GrayoutButtons(){
+    AcceptButtonPush = false;
+    console.log("Buttons disabled");
+}
+
+function UpdateCounter(){
+    document.getElementById("chocolateCounter").innerHTML = Chocolates;
 }
 
 function UpdateTextDisplay(){
@@ -21,49 +86,23 @@ function UpdateTextDisplay(){
 }
 
 function addTextLine(TEXT){
-    textDisplay.push(TEXT);
+    textDisplay.push("| " + TEXT);
     textDisplay.shift();
     UpdateTextDisplay();
 }
 
 
-function PageLoad(){
 
+
+// YOU LOST FUNCTION
+
+function CheckForLoss(){
+    if(Chocolates <= 0){
+        setTimeout(() => {  GameOver(); }, 400);
+        GrayoutButtons();
+    }
 }
 
-
-function LickChocolate(Count){
-    Chocolates -= Count;
-    playerLastLick = Count;
-    console.log(Count + " Chocolate was taken");
-    UpdateCounter(Chocolates);
-    addTextLine(Count + " Chocolates where taken from the jar, " + Chocolates + " Chocolates are left.")
+function GameOver(){
+    alert("Game Over, noob");
 }
-
-
-function PlayerTurn(){
-    NormalizeButtons();
-
-    GrayoutButtons();
-}
-
-function ComputerTurn(){
-    var Take = 4 - playerLastLick;
-}
-
-
-function NormalizeButtons(){
-    //function der gør knapperne den rigtige farve igen
-}
-
-
-function GrayoutButtons(){
-    //function der gør knapperne grå
-}
-
-function UpdateCounter(Chocolates){
-    document.getElementById("chocolateCounter").innerHTML = Chocolates;
-}
-
-
-

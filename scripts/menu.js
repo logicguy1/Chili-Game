@@ -8,6 +8,7 @@ function show_game(){
 
   menu.style.visibility = "hidden";
   game.style.visibility = "visible";
+  setTimeout(() => {  FIRSTPLAY(); }, 300);
 }
 
 function show_rules(){
