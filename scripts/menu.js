@@ -14,9 +14,6 @@ function show_rules(){
   var btn2 = document.getElementById("rules");
   btn2.style.visibility = "visible";
   btn2.style.animation="appear .5s ease";
-  console.log("YEEEAAA");
-  GAMEStart();
-  console.log("YOO");
 }
 
 function hide_rules(){
