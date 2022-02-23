@@ -1,11 +1,23 @@
+setTimeout(() => {  START(); }, 10);
 var Chocolates = 13;
 var playerLastLick;
+
+
+
+function START(){
+    UpdateCounter(Chocolates);
+}
+
+function PageLoad(){
+
+}
+
 
 function LickChocolate(Count){
     Chocolates -= Count;
     playerLastLick = Count;
     console.log(Count + " Chocolate was taken");
-    UpdateCounter(Chocolates)
+    UpdateCounter(Chocolates);
 }
 
 
@@ -30,5 +42,9 @@ function GrayoutButtons(){
 }
 
 function UpdateCounter(Chocolates){
-    document.getElementById("chocolateCounter").innerHTML = Chocolates
+    console.log("JJJK")
+    document.getElementById("chocolateCounter").innerHTML = Chocolates;
 }
+
+
+

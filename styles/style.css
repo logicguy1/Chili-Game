@@ -44,7 +44,7 @@ h5{
 }
 
 .bt1 {
-  animation: rainbow-bg 30s linear infinite;
+  animation: rainbow-bg 10s linear infinite;
   animation-delay: -20s;
 
   height: 75px;
@@ -149,40 +149,55 @@ h5{
 
 @keyframes rainbow-bg{
 		100%,0%{
-			background-color: rgb(255,0,0);
+			background-color: #f03269;
 		}
-		8%{
-			background-color: rgb(255,127,0);
+		6.25%{
+			background-color: #ef4143;
 		}
-		16%{
-			background-color: rgb(255,255,0);
+		12.5%{
+			background-color: #ef6234;
+		}
+		18.75%{
+			background-color: #efaa33;
 		}
 		25%{
-			background-color: rgb(127,255,0);
+			background-color: #b2ef34;
 		}
-		33%{
-			background-color: rgb(0,255,0);
+		31.25%{
+			background-color: #a6ef33;
 		}
-		41%{
-			background-color: rgb(0,255,127);
+		37.5%{
+			background-color: #61ef34;
+		}
+		43.75%{
+			background-color: #33ef57;
 		}
 		50%{
-			background-color: rgb(0,255,255);
+			background-color: #33ef92;
 		}
-		58%{
-			background-color: rgb(0,127,255);
+		56.25%{
+			background-color: #33eed4;
 		}
-		66%{
-			background-color: rgb(0,0,255);
+		62.5%{
+			background-color: #34bdee;
 		}
-		75%{
-			background-color: rgb(127,0,255);
+		68.75%{
+			background-color: #347eef;
 		}
-		83%{
-			background-color: rgb(255,0,255);
+    75%{
+			background-color: #333aef;
 		}
-		91%{
-			background-color: rgb(255,0,127);
+    81.25%{
+			background-color: #6633ef;
+		}
+    87.5%{
+			background-color: #b933ef;
+		}
+    93.75%{
+			background-color: #f02cb2;
+		}
+    100%{
+			background-color: #f03269;
 		}
 }
 
