@@ -1,3 +1,5 @@
+console.log(document.getElementsByClassName("TakeButton"))
+
 setTimeout(() => {  START(); }, 10);
 var Chocolates = 13;
 var playerLastLick;
@@ -61,14 +63,29 @@ function ComputerTurn(){
 //
 //HELP Functions    --    TOOLS
 
-function NormalizeButtons(){
-    AcceptButtonPush = true;
-    console.log("Buttons enabled");
+
+function ToggleHandOut(){
+    document.getElementsByClassName("TakeButton")[0].style.animation = "HandToggleOut 0.4s linear forwards";
+    document.getElementsByClassName("TakeButton")[1].style.animation = "HandToggleOut 0.4s linear forwards";
+    document.getElementsByClassName("TakeButton")[2].style.animation = "HandToggleOut 0.4s linear forwards";
+}
+function ToggleHandIn(){
+    document.getElementsByClassName("TakeButton")[0].style.animation = "HandToggleIn 0.4s linear forwards";
+    document.getElementsByClassName("TakeButton")[1].style.animation = "HandToggleIn 0.4s linear forwards";
+    document.getElementsByClassName("TakeButton")[2].style.animation = "HandToggleIn 0.4s linear forwards";
 }
 
 
+function NormalizeButtons(){
+    AcceptButtonPush = true;
+    ToggleHandOut();
+    console.log("Buttons enabled");
+
+}
+
 function GrayoutButtons(){
     AcceptButtonPush = false;
+    ToggleHandIn();
     console.log("Buttons disabled");
 }
 

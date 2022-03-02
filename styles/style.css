@@ -246,11 +246,17 @@ h5{
   }
 }
 
+
+
+
+
 .game {
   top: 0;
   position: absolute;
-
+  left: 0;
+  width: 100%;
   visibility: hidden;
+  min-height: 1600px;
 }
 
 .menu {
@@ -263,17 +269,17 @@ img {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;  
-}
-
-
-
-
+    user-select: none;
+    animation: HandToggleOut 0.4s linear forwards;
+  }
 
 
 #Chat {
   background-color: rgb(32, 32, 32);
   border-radius: 7px;
+  margin: auto;
+  width: 70%;
+  bottom: 0;
 }
 
 #Chat h1{
@@ -282,3 +288,25 @@ img {
   font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
 }
+
+
+@keyframes HandToggleIn{
+  0%{
+    transform: translateX(0px);
+  }80%{
+    transform: translateX(-39px);
+  } 100%{
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes HandToggleOut{
+  100%{
+    transform: translateX(0px);
+  } 80%{
+    transform: translateX(-39px);
+  } 0%{
+    transform: translateX(-300px);
+  }
+}
+
